@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>        
+        <!-- 数据库驱动名称 -->
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <!-- 数据库链接地址 -->
+        <property name="hibernate.connection.url">jdbc:sqlserver://localhost:1434;database=DB_IntegratedPlatformYM</property>
+        <!-- <property name="hibernate.connection.url">jdbc:sqlserver://192.168.1.245:1433;database=DB_IntegratedPlatformYM</property> -->
+        <!-- <property name="hibernate.connection.url">jdbc:sqlserver://localhost:1434;database=DB_IntegratedPlatformYM</property> -->
+        <!-- 数据库用户名称 -->
+        <property name="hibernate.connection.username">sa</property>
+        <!-- 数据库密码 -->
+        <property name="connection.password">Aa123</property>
+        <!-- 设置数据库连接池默认个数 -->
+        <property name="connection.pool_size">10</property>
+        <!-- 设置数据库SQL语言类型 -->
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServer2008Dialect</property>
+        <!-- 设置是否显示SQL语句-->
+        <property name="show_sql">false</property>
+        <!-- 设置是否格式化SQL语句 -->
+        <property name="format_sql">true</property>
+        <!-- 设置使用线程-->
+        <property name="current_session_context_class">thread</property>
+        <property name="javax.persistence.validation.mode">none</property> 
+        <!-- 设置hibernate的映射文件-->
+        <!--mapping  resource="edu/dzu/vo/UsersVo.hbm.xml"/--> 
+        <mapping class = "com.tinz.ssh.model.SiteType"/> 
+        <mapping class = "com.tinz.ssh.model.Userr"/>
+		<mapping class = "com.tinz.ssh.model.HourDataRCMain"/>
+		<mapping class = "com.tinz.ssh.model.HourDataRCDetail"/>
+		<mapping class = "com.tinz.ssh.model.RealDataInforRCMain"/>
+		<mapping class = "com.tinz.ssh.model.RealDataInforRCDetail"/>
+		<mapping class = "com.tinz.ssh.model.MonitorFactor"/>
+		<mapping class = "com.tinz.ssh.model.MeasureUnitCode"/>
+		<mapping class = "com.tinz.ssh.model.EquipmentInfor"/>
+		<mapping class = "com.tinz.ssh.model.EnterpriseInfo"/>
+		<mapping class = "com.tinz.ssh.model.SiteInfor"/>
+		<mapping class = "com.tinz.ssh.model.AlarmRecord"/>
+		<mapping class = "com.tinz.ssh.model.AlarmLimitType"/>
+		<mapping class = "com.tinz.ssh.model.AlarmLimitTimeType"/>
+		
+    </session-factory>
+</hibernate-configuration>

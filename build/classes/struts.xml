@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.objectFactory" value="spring" />
+
+	<package name="zr" namespace="/" extends="json-default">
+		<action name="login" class="com.tinz.ssh.action.LoginAction" method="login"><result type="json"/></action>
+		<action name="getequipmentinfo" class="com.tinz.ssh.action.LoginAction" method="getEquipmentInfors"><result type="json"/></action>
+		<action name="getenterpriseinfo" class="com.tinz.ssh.action.LoginAction" method="getEnterpriseInfo"><result type="json"/></action>
+		<action name="getsitemonitor" class="com.tinz.ssh.action.LoginAction" method="getSiteMonitorInfo"><result type="json"/></action>
+		<action name="getmonitorfactors" class="com.tinz.ssh.action.LoginAction" method="getMonitorFactors"><result type="json"/></action>
+		<action name="getreal" class="com.tinz.ssh.action.LoginAction" method="getRealtimeData"><result type="json"/></action>
+		<action name="gethour" class="com.tinz.ssh.action.LoginAction" method="getHourData"><result type="json"/></action>
+		<action name="getalarm" class="com.tinz.ssh.action.LoginAction" method="getAlarmRecordData"><result type="json"/></action>
+	</package>
+
+</struts>
